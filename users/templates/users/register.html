@@ -2,8 +2,8 @@
 <form class="card" method="post" enctype="multipart/form-data" style="margin: 30px">
     <h3 class="card-header">Заполните форму ниже</h3>
     <div class="card-body">
-        {% csrf_token %}
         {{ form.as_p }}
+        {% csrf_token %}
         <button type="submit" class="btn btn-success">Зарегистрироваться</button>
     </div>
 
