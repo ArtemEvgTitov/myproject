@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card text-center">
+    <div class="card-body">
+        <h5 class="card-title">Уважаемый {{ user.username }}</h5>
+        <p class="card-text">Добро пожаловать на сайт!</p>
+        <a class="btn btn-success" href="/recipes/create">Новый рецепт</a>
+        <a class="btn btn-outline-danger" href="{% url 'logout' %}">Выйти из аккаунта</a>
+    </div>
+</div>
+{% endblock %}

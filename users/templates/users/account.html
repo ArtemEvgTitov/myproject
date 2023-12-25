@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card-body text-center">
+    {% if request.user.is_authenticated %}
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Уважаемый {{ user.username }}</h5>
+            <p class="card-text">Когда нибудь ты сможешь написать что-нибудь о себе и загрузить свою аватарку, а пока кликай на кнопку ниже</p>
+            <a href="/index" class="btn btn-primary">Посмотреть интересные рецепты</a>
+            <a class="btn btn-outline-danger" href="{% url 'logout' %}">Выйти из аккаунта</a>
+        </div>
+    </div>
+    {% elif request.user.is_authenticated == False %}
+    <a class="btn btn-primary mt-5 mb-5" href="login" role="button">Войти</a>
+    <a class="btn btn-primary mt-5 mb-5" href="register" role="button">Создать аккаунт</a> {% endif %}
+</div>
+{% endblock %}

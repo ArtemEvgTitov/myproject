@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %} {% if recipes %}
+<h3 style="display: flex; justify-content: center; margin: 30px">{{ title }}</h3>
+<div style="display: flex; justify-content: center; flex-wrap: wrap;">
+
+    {% for recipe in recipes %} {% if not recipe.delete %}
+    <div class="card mb-3" style="margin: 20px;">
+        <div class="card" style="width: 25rem; padding: 20px;">
+            {% if recipe.photo %}
+            <p><img style="height: 20rem" class="card-img-top object-fit-none border rounded" src="{{recipe.photo.url}}"></p>
+            {% endif %}
+            <h5 class="card-title">{{ recipe.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Автор: {{ recipe.author }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+                Дата публикации: {{ recipe.updated_at|date:"F d, Y" }}
+            </h6>
+            <a href="{% url 'recipes-detail' recipe.pk %}" class="btn btn-info" style="text-decoration: none;">Подробнее</a>
+        </div>
+    </div>
+
+    {% autoescape on %} {{p.content|linebreaks|truncatewords:50}} {% endautoescape %} {% endif %} {% endfor %} {% elif not recipes %}
+    <h3>Скоро тут шото будет</h3>
+    {% endif %}
+</div>
+{% endblock %}
