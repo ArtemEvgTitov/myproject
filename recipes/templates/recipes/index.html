@@ -6,7 +6,7 @@
     <div class="card mb-3" style="margin: 20px;">
         <div class="card" style="width: 25rem; padding: 20px;">
             {% if recipe.photo %}
-            <p><img style="height: 20rem" class="card-img-top object-fit-none border rounded" src="{{recipe.photo.url}}"></p>
+            <p><img style="height: 20rem" class="card-img-top object-fit-none border rounded" src="static {{recipe.photo.url}}"></p>
             {% endif %}
             <h5 class="card-title">{{ recipe.title }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Автор: {{ recipe.author }}</h6>
