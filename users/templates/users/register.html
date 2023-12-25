@@ -1,8 +1,8 @@
-{% extends 'base.html' %}{% block content %} {% csrf_token %}
-<form class="card" method="post" enctype="multipart/form-data" style="margin: 30px">
+{% extends 'base.html' %}{% block content %}
+<form class="card" method="post"  style="margin: 30px">
     <h3 class="card-header">Заполните форму ниже</h3>
     <div class="card-body">
-
+        {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-success">Зарегистрироваться</button>
     </div>
