@@ -2,9 +2,9 @@
 <div class="card text-center">
     {% if message %}{% endif %}
     <p style="margin: 30px">Используйте следующую форму для входа в систему:</p>
-
+    {% csrf_token %}
     <form method="post">
-        {{ form.as_p }} {% csrf_token %}
+        {{ form.as_p }}
         <p><input class="btn btn-success mt-5 mb-5" type="submit" value="Войти"></p>
         <a class="btn btn-primary mt-5 mb-5" href="/account" role="button">Назад</a>
     </form>
