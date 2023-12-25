@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
     'users',
     'recipes',
 ]
@@ -75,8 +74,6 @@ TEMPLATES = [
         },
     },
 ]
-
-CRISPY_TEMPLATE_PACK = 'uni_form'
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
