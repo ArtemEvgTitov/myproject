@@ -1,5 +1,5 @@
 {% extends 'base.html' %}{% block content %}
-<form class="card" method="post"  style="margin: 30px">
+<form class="card" method="post" enctype="multipart/form-data" style="margin: 30px">
     <h3 class="card-header">Заполните форму ниже</h3>
     <div class="card-body">
         {% csrf_token %}

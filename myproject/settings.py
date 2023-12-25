@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
     'artemtitov.pythonanywhere.com'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://*.pythonanywhere.com']
 
 # Application definition
 
