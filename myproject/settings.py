@@ -32,7 +32,6 @@ ALLOWED_HOSTS = [
     'artemtitov.pythonanywhere.com'
 ]
 
-ALLOWED_HOSTS = []
 
 # Application definition
 
