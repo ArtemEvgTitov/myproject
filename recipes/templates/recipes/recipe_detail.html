@@ -18,4 +18,4 @@
     <a class="btn btn-outline-info" href="{% url 'recipes-update' object.id %}">Изменить</a>
     <a class="btn btn-outline-danger" href="{% url 'recipes-delete' object.id %}">Удалить</a>
 </div>
-{% endif %} {% autoescape on %} {{p.content|linebreaks|truncatewords:50}} {% endautoescape %} {% endblock %}
+{% endif %}  {% endblock %}

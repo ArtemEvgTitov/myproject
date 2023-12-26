@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    {% autoescape on %} {{p.content|linebreaks|truncatewords:50}} {% endautoescape %} {% endif %} {% endfor %} {% elif not recipes %}
+     {% endif %} {% endfor %} {% elif not recipes %}
     <h3>Скоро тут будут ваши рецепты</h3>
     {% endif %}
 </div>
